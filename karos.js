@@ -7,6 +7,7 @@ function openSpawnSelector() {
   document.querySelector(".boxkaros2").style.display = "block";
   document.querySelector(".boxkaros3").style.display = "block";
   document.querySelector(".boxkaros4").style.display = "block";
+  document.querySelector(".boxkaros5").style.display = "block";
   
 
 }
@@ -36,6 +37,7 @@ function selectSandy() {
     document.querySelector(".boxkaros2").style.display = "none";
     document.querySelector(".boxkaros3").style.display = "none";
     document.querySelector(".boxkaros4").style.display = "none";
+    document.querySelector(".boxkaros5").style.display = "none";
     document.querySelector(".background").style.display = "none";
 }
 function selectPolice() {
@@ -45,6 +47,7 @@ function selectPolice() {
     document.querySelector(".boxkaros2").style.display = "none";
     document.querySelector(".boxkaros3").style.display = "none";
     document.querySelector(".boxkaros4").style.display = "none";
+    document.querySelector(".boxkaros5").style.display = "none";
     document.querySelector(".background").style.display = "none";
 }
 function selectAirport() {
@@ -54,6 +57,7 @@ function selectAirport() {
     document.querySelector(".boxkaros2").style.display = "none";
     document.querySelector(".boxkaros3").style.display = "none";
     document.querySelector(".boxkaros4").style.display = "none";
+    document.querySelector(".boxkaros5").style.display = "none";
     document.querySelector(".background").style.display = "none";
 }
 
@@ -64,6 +68,17 @@ function selectPaleto() {
     document.querySelector(".boxkaros2").style.display = "none";
     document.querySelector(".boxkaros3").style.display = "none";
     document.querySelector(".boxkaros4").style.display = "none";
+    document.querySelector(".boxkaros5").style.display = "none";
+    document.querySelector(".background").style.display = "none";
+}
+function selectSpawn() {
+    post(`https://krs_spawnselector/spawn`)
+    document.querySelector(".title").style.display = "none";
+    document.querySelector(".boxkaros").style.display = "none";
+    document.querySelector(".boxkaros2").style.display = "none";
+    document.querySelector(".boxkaros3").style.display = "none";
+    document.querySelector(".boxkaros4").style.display = "none";
+    document.querySelector(".boxkaros5").style.display = "none";
     document.querySelector(".background").style.display = "none";
 }
 
@@ -87,6 +102,7 @@ document.onkeydown = function (evt) {
     document.querySelector(".boxkaros2").style.display = "none";
     document.querySelector(".boxkaros3").style.display = "none";
     document.querySelector(".boxkaros4").style.display = "none";
+    document.querySelector(".boxkaros5").style.display = "none";
     document.querySelector(".background").style.display = "none";
   }
 };

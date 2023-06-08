@@ -1,5 +1,9 @@
 ESX = exports["es_extended"]:getSharedObject()
 
+
+local lastPosition = nil
+local cam
+
 -- Function Close 
 RegisterNUICallback('close', function(data, cb)
    SetNuiFocus(false,false)
@@ -7,7 +11,7 @@ RegisterNUICallback('close', function(data, cb)
 end)
 
 
-local cam
+
 
 function SpawnPlayer(x, y, z)
     local pos = GetEntityCoords(PlayerPedId())
@@ -89,4 +93,20 @@ RegisterNUICallback('paleto', function(data, cb)
     local spawnPos = vector3(-435.5411, 6023.0200, 31.4901)
     SpawnPlayer(spawnPos.x, spawnPos.y, spawnPos.z)
     cb('ok')
+end)
+
+RegisterNUICallback('spawn', function(data, cb)
+    if lastPosition ~= nil then
+        SpawnPlayer(lastPosition.x, lastPosition.y, lastPosition.z)
+        cb('ok')
+    else
+      
+        cb('error: last known position not found')
+    end
+end)
+
+RegisterNetEvent('playerSpawned')
+AddEventHandler('playerSpawned', function()
+    local pos = GetEntityCoords(PlayerPedId())
+    lastPosition = pos
 end)

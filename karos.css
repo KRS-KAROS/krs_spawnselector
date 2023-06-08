@@ -88,35 +88,26 @@
   margin-left: 850px; /* Aggiunge un margine tra i box */
 }
 
-
-.sandy img {
-  background-image: url();
-  margin-top: 16%;
-  margin-left: -1px;
-  width: 130px;
-  animation: Krs 2s ease 0s 1 normal forwards;
+.boxkaros5 {
+  display: none;
+  position: absolute;
+  float: left;
+  background-color: #343A40;
+  box-shadow: 1px 1px 5px 1px #222222;
+  color: white;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 4px;
+  width: 100px;
+  height: 55px;
+  font-size: 7px;
+  
+  margin-top: 550px;
+  margin-left: 850px; /* Aggiunge un margine tra i box */
 }
 
-.police img {
-  margin-top: 19%;
-  margin-left: -1px;
-  width: 130px;
-  animation: Krs 2s ease 0s 1 normal forwards;
-}
 
-.airport img {
-  margin-top: 16%;
-  margin-left: -1px;
-  width: 130px;
-  animation: Krs 2s ease 0s 1 normal forwards;
-}
 
-.paleto img {
-  margin-top: 16%;
-  margin-left: -1px;
-  width: 110px;
-  animation: Krs 2s ease 0s 1 normal forwards;
-}
 
 * {
   transition: all 0.4s;
@@ -138,6 +129,12 @@
 }
 
 .boxkaros4:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+.boxkaros5:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
